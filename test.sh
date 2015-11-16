@@ -1,9 +1,9 @@
 ./cwriter data
-chmod 666 data
 echo "############"
 echo "C READER"
 echo "############"
 ./creader data
+./gowriter
 echo "############"
 echo "GO READER"
 echo "############"

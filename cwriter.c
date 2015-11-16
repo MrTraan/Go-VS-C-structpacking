@@ -26,7 +26,7 @@ int		main(int argc, char **argv)
 		write(1, "need file path\n", 15);
 		return (1);
 	}
-	fd = open(argv[1], O_CREAT | O_TRUNC | O_RDWR);
+	fd = open(argv[1], O_CREAT | O_TRUNC | O_RDWR, 0666);
 	if (fd == -1)
 	{
 		write(1, "couldn't open file\n", 19);
