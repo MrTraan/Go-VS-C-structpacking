@@ -5,6 +5,6 @@ all:
 	gcc -o cwriter cwriter.c
 
 fclean:
-	rm -f goreader creader cwriter
+	rm -f goreader gowriter creader cwriter
 
 clean: fclean
