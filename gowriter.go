@@ -18,10 +18,10 @@ func main() {
 
 	for i := range input {
 		input[i].id = int32(i)
-		input[i].comment[0] = 116
-		input[i].comment[1] = 101
-		input[i].comment[2] = 115
-		input[i].comment[3] = 116
+		input[i].comment[0] = 't'
+		input[i].comment[1] = 'e'
+		input[i].comment[2] = 's'
+		input[i].comment[3] = 't'
 		input[i].comment[4] = 0
 	}
 
