@@ -15,11 +15,6 @@ int		main(int argc, char **argv)
 	int		fd;
 	t_foo	data[10];
 
-	for (int i = 0; i < 10; i++)
-	{
-		data[i].id = 0;
-		data[i].comment[0] = '\0';
-	}
 	if (argc != 2)
 	{
 		write(1, "need file path\n", 15);
