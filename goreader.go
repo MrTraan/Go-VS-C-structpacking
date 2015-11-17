@@ -16,7 +16,12 @@ type foo struct {
 func main() {
 	var output [10]foo
 
-	file, err := os.Open("datago")
+	if len(os.Args) != 2 {
+		fmt.Println("Need file path")
+		return
+	}
+
+	file, err := os.Open(os.Args[1])
 	if err != nil {
 		fmt.Println("error when opening file:", err)
 		return

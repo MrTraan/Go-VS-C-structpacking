@@ -16,6 +16,11 @@ type foo struct {
 func main() {
 	var input [10]foo
 
+	if len(os.Args) != 2 {
+		fmt.Println("Need file path")
+		return
+	}
+
 	for i := range input {
 		input[i].id = int32(i)
 		input[i].comment[0] = 't'
@@ -25,8 +30,7 @@ func main() {
 		input[i].comment[4] = 0
 	}
 
-	//file, err := os.Open("data")
-	file, err := os.OpenFile("datago", os.O_CREATE|os.O_TRUNC|os.O_RDWR, 0666)
+	file, err := os.OpenFile(os.Args[1], os.O_CREATE|os.O_TRUNC|os.O_RDWR, 0666)
 	if err != nil {
 		fmt.Println("error when opening file:", err)
 		return

@@ -3,8 +3,8 @@ echo "############"
 echo "C READER"
 echo "############"
 ./creader data
-./gowriter
+./gowriter datago
 echo "############"
 echo "GO READER"
 echo "############"
-./goreader
+./goreader datago
